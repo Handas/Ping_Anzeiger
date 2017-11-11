@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.707,=C:\Users\tgonz\Dropbox\Projekte\Ping Anzeiger\Symbols\Red.ico</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.298,C:\Users\tgonz\Documents\Embarcadero\Studio\Projekte\Unit1.pas=C:\Users\tgonz\Dropbox\Projekte\Ping Anzeiger\Main.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.289,=C:\Users\tgonz\Documents\Embarcadero\Studio\Projekte\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.619,C:\Users\tgonz\Dropbox\Projekte\Ping Anzeiger\Symbols\Red.ico=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.005,=C:\Users\tgonz\Dropbox\Projekte\Ping Anzeiger\Symbols\Green.ico</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.622,C:\Users\tgonz\Dropbox\Projekte\Ping Anzeiger\Symbols\Green.ico=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.298,C:\Users\tgonz\Documents\Embarcadero\Studio\Projekte\Unit1.dfm=C:\Users\tgonz\Dropbox\Projekte\Ping Anzeiger\Main.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.729,C:\Users\tgonz\Dropbox\Projekte\Ping Anzeiger\Project1.dproj=C:\Users\tgonz\Dropbox\Projekte\Ping Anzeiger\Ping_Anzeige.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.709,=C:\Users\tgonz\Dropbox\Projekte\Ping Anzeiger\Symbols\Yellow.ico</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.621,C:\Users\tgonz\Dropbox\Projekte\Ping Anzeiger\Symbols\Yellow.ico=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.829,C:\Users\tgonz\Documents\Embarcadero\Studio\Projekte\Project1.dproj=C:\Users\tgonz\Dropbox\Projekte\Ping Anzeiger\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.844,=C:\Users\tgonz\Documents\Embarcadero\Studio\Projekte\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.165,=C:\Users\tgonz\Documents\Embarcadero\Studio\Projekte\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.052,=C:\Users\tgonz\Documents\Embarcadero\Studio\Projekte\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

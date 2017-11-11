@@ -1,0 +1,80 @@
+unit Main;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls,
+  IdIcmpClient, IdBaseComponent, IdComponent, IdRawBase, IdRawClient;
+
+type
+  TForm1 = class(TForm)
+    TrayIcon: TTrayIcon;
+    client: TIdIcmpClient;
+    Timer: TTimer;
+    procedure FormCreate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure clientReply(ASender: TComponent;
+      const AReplyStatus: TReplyStatus);
+    procedure TimerTimer(Sender: TObject);
+  private
+    { Private-Deklarationen }
+    ico_green:TIcon;
+    ico_yellow:TIcon;
+    ico_red:TIcon;
+    ms:integer;
+  public
+    { Public-Deklarationen }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.clientReply(ASender: TComponent;
+  const AReplyStatus: TReplyStatus);
+begin
+  ms := AReplyStatus.MsRoundTripTime;
+end;
+
+procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  ico_green.Free;
+  ico_yellow.Free;
+  ico_red.Free;
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  Application.ShowMainForm := false;
+  ico_green := TIcon.Create;
+  ico_yellow := TIcon.Create;
+  ico_red := TIcon.Create;
+
+  ico_green.LoadFromFile(extractfilepath(paramstr(0))+'\Green.ico');
+  ico_yellow.LoadFromFile(extractfilepath(paramstr(0))+'\Yellow.ico');
+  ico_red.LoadFromFile(extractfilepath(paramstr(0))+'\Red.ico');
+
+  timer.Interval:=10000;
+  timer.Enabled :=true;
+end;
+
+procedure TForm1.TimerTimer(Sender: TObject);
+begin
+  client.Host := '8.8.8.8';
+  client.Ping;
+  case ms of
+    0..80:    TrayIcon.Icon := ico_green;
+    81..120:  TrayIcon.Icon := ico_yellow;
+    121..9000:  TrayIcon.Icon := ico_red; //It´s Over NEIN-Tausend
+    else
+      TrayIcon.Icon := ico_red;
+  end;
+  TrayIcon.Hint := IntToStr(ms)+' ms';
+  Application.ProcessMessages;
+end;
+
+end.
